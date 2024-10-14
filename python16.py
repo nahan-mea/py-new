@@ -1,7 +1,14 @@
-numbers = [1, -2, 3, -4, 5]
-positive_numbers = [num for num in numbers if num > 0]
-squares = [num ** 2 for num in numbers]
-word = "hello"
-vowels = [char for char in word if char in 'aeiou']
+
+integers = [int(x) for x in input("Enter a list of integers (space-separated): ").split()]
+
+word = input("Enter a word: ")
+
+positive_numbers = [num for num in integers if num > 0]
+squared_numbers = [num ** 2 for num in integers]
+vowels = [char for char in word if char in 'aeiouAEIOU']
 ordinal_values = [ord(char) for char in word]
-print(positive_numbers, squares, vowels, ordinal_values)
+
+print("\nPositive numbers from the list:", positive_numbers)
+print("Squares of the numbers:", squared_numbers)
+print("Vowels in the word:", vowels)
+print("Ordinal values of each character in the word:", ordinal_values)
